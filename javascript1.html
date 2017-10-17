@@ -1,2 +1,24 @@
-javascript
-library
+<!doctype html>
+<html>
+<body>
+	<h1>Clarifai</h1>
+	<script type="text/javascript" src="http://sdk.clarifai.com/js/clarifai">
+	</script>
+	<script>
+		var app= new Clarifai.App(
+		
+		'[Client ID]',
+		'[Client Secret]'
+		);
+
+		app.models.predict'(Clarifai.GENERAL_MODEL,'https://sample.clarifai.com/metro-north.jpg').then(function(response){
+		console.log(response);
+		},
+			
+		function(err){
+			console.log(err);
+			});
+		document.write("this is used Javascript for AI");
+		</script>
+</body>
+</html>
