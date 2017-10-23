@@ -1,4 +1,9 @@
-# javascript_rookie
-# This is used javascript for AI.
-# This is used angular .
-# Can you give me comments,thank you.
+#Name
+ Sein P---
+ Javascript,Angular Module.
+ Used javascript for AI.
+ 
+#Description
+ Used javascript for AI.
+ And,production of angular module.
+
