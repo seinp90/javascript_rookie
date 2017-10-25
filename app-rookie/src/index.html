@@ -1,16 +1,43 @@
-<!doctype html>
-<html lang="en" ng-app>
+<!Doctype html>
+<html  ng-app>
 <head>
   <meta charset="utf-8">
   <title>AppRookie</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
-
-</head>
-<body>
+  <script src="todo.js"></script>
+  <link rel="stylesheet" href="style.css>"
+  </head>
+  <body>
 	<div>
 		<label>名前:</label>
 		<input type="text" ng-model="yourName" placeholder="名前を入力してください。"> 
 	</div>
 	<h1>こんにちは、{{yourName}}!</h1>
+	<div data-ng-app="" data-ng-init="quantity=1;price=5">
+		<h2>合計計算</h2>
+		数量:<input type="number" ng-model="quantity">
+		価格:<input type="nuber" ng-model="price">
+
+		<p><b>合計金額: </b>{{quantity*price}}</p>
+	</div>
+
+	<h2>商品カゴ</h2>
+	<div ng-controller="ToPurchaseCtrl">
+	
+		<span><残り:{{tobuylist.remaining()}} of {{tobuylist.tobuys.length}} remaining</span>
+		<a href="" ng-click="archieve()">完了</a>
+		<ul class="unstyled">
+			<li ng-repeat="tobuy in tobuylist.tobuys">
+				<label class ="checkbox">
+				<input type="checkbox" ng-model="tobuy.done">
+				<span class="done-{{tobuys.done}}">{{tobuys.goods}}</span>
+				</label>
+				</li>
+		</ul>
+		<form  ng-summit="addTobuy()">
+			<input type="text" ng-model="todoBuy" size="30" placeholder="新しい商品を追加">
+		        <input class="btn-primary" type="追加" value="add">	
+		</form>
+	</div>
 </body>
 </html>
