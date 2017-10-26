@@ -15,7 +15,7 @@ angular.module('tobuyapp',[])
 		var account =0;
 		angular.forEach(tobuylist.tobuys, function(tobuy){
 
-		count += tobuy.done? 0:1 ;
+		count += tobuy.done ? 0:1 ;
 	
 	});
 	return count;
